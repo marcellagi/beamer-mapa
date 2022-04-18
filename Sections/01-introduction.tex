@@ -1,25 +1,25 @@
 %*----------- SLIDE -------------------------------------------------------------
 \begin{frame}[t]{Introdução} 
     \transdissolve[duration=0.5]
-    Um dos pontos importantes na área da robótica é a interação entre os sistemas, e em decorrência ao programa de formação em robótica uma das lacunas será preenchida com o desenvolvimento do desafio 2.5..
+    Um dos pontos importantes na área da robótica móvel é a localização e mapeamento de locais desconhecidos, através dos sistemas SLAM é possível construir um mapa do ambiente e, ao mesmo tempo, usar esse mapa para calcular sua localização.
+    
 
-    O desafio consiste em:
+    A comparação é feita através dos seguintes sensores:
     %\newline
         \begin{columns}[t]
             \column{.05\linewidth}
             \column{.4\linewidth}
                 \begin{enumerate}
-                    \item assimilar o conhecimento da interação em robots;
-                    \item compreender em profundidade os conceitos de simulação, e o;
-                    \item desenvolvimento da liderança em projetos \cite{Mohan2015}.
+                    \item Lidar 2D;
+                    \item Câmera monocular;
+                    \item Câmera stéreo.
                 \end{enumerate}
             \column{.6\linewidth}
             \begin{center}
             %\centerline{
                 \begin{figure}
-                    %\includegraphics[width=1\textwidth]{pista}
-                    \caption{Pista de corrida \cite{agostini2007}}
-                    \roundpic[xshift=0cm,yshift=0cm]{2.5cm}{6cm}{pista}
+                    \includegraphics[width=0.5\textwidth]{pista}
+                    
                     %\caption{Pista de corrida \cite{agostini2007}}
                 \end{figure}
             %}
@@ -31,7 +31,7 @@
 %-
 %*----------- SLIDE -------------------------------------------------------------
 \begin{frame}[c]{Objetivo} 
-    \framesubtitle{sub-objetivo}
+    %\framesubtitle{sub-objetivo}
     \transdissolve[duration=0.5]
    
     \begin{center}
@@ -39,8 +39,8 @@
         \begin{shaded}
         \begin{center}
             \vspace*{0.5cm}
-            \resizebox{!}{0.7cm}{%
-                \color{bg} O objetivo é ter um objetivo.
+            \resizebox{!}{0.5cm}{%
+                \color{bg} Comparar as trajetórias de cada sistema SLAM
             }%
         \end{center}
         \end{shaded}
@@ -53,46 +53,46 @@
 \end{frame}
 %-
 {
-\setbeamertemplate{background}
-{\includegraphics[trim = 0 0 0 0, clip, width = \the\paperwidth, height = \the\paperheight]{marcel-knupfer-37wuETxVwTQ-unsplash.jpg}}
+%\setbeamertemplate{background}
+%{\includegraphics[trim = 0 0 0 0, clip, width = \the\paperwidth, height = \the\paperheight]{marcel-knupfer-37wuETxVwTQ-unsplash.jpg}}
 %*----------- SLIDE -------------------------------------------------------------
-\begin{frame}[c]{}
-    \transboxout[duration=0.5]
-    
-    \begin{columns}
-        \column{.1\textwidth}
-        \column{.3\textwidth}
-        \column{.53\textwidth}
-            \vspace*{-3.5cm}
-            \Huge{\textbf{\textcolor{mracula5}{Quando chovia...}}}
-    \end{columns}
+%\begin{frame}[c]{}
+%    \transboxout[duration=0.5]
+%    
+%    \begin{columns}
+%        \column{.1\textwidth}
+%        \column{.3\textwidth}
+%        \column{.53\textwidth}
+%            \vspace*{-3.5cm}
+%            \Huge{\textbf{\textcolor{mracula5}{Quando chovia...}}}
+%    \end{columns}
 %*----------- notes
-    \note[item]{Notes can help you to remember important information. Turn on the notes option.}
-\end{frame}
+%    \note[item]{Notes can help you to remember important information. Turn on the notes option.}
+%\end{frame}
 %-
 }
 %*----------- SLIDE -------------------------------------------------------------
-\begin{frame}[t]{O sistema robótico}
+\begin{frame}[t]{Lidar 2D}
     \transboxout[duration=0.5]
-    \framesubtitle{Darwin-OP}
+    %\framesubtitle{Darwin-OP}
     \begin{columns}
-        \column{.1\textwidth}
+        %\column{.1\textwidth}
         \column{.4\textwidth}
-            \includegraphics[width=.7\textwidth]{darwin-op}
+            \includegraphics[width=0.9\textwidth]{lidar.png}
         \column{.4\textwidth}
             \begin{enumerate}
-                \item plataforma antropormórfica Darwin-OP;
-                \item 20 DoF\footnote{do inglês, graus de liberdade};
-                \item composto de 18 servo-motores;
-                \item possui um grande gama de sensores para interação.
+                \item GMAPPING;
+                \item Hector SLAM;
+                \item Cartographer;
+                
             \end{enumerate}
     \end{columns}
  %*----------- notes
-    \note[item]{Notes can help you to remember important information. Turn on the notes option.}
+    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
 \end{frame}
 %-
 %*----------- SLIDE -------------------------------------------------------------
-\begin{frame}[c]{Darwin-OP - overview}
+\begin{frame}[c]{GMAPPING}
     %\transboxin[duration=1,direction=30]
     \centering
 
@@ -101,15 +101,111 @@
       totalheight=0.39375\linewidth,
       activate=pageopen,
       passcontext, 
-      addresource=./Source/movies/Darwin-OP.mp4,
+      addresource=./Source/movies/gmap.mp4,
       flashvars={
-      source=./Source/movies/Darwin-OP.mp4
+      source=./Source/movies/gmap.mp4
       &autoPlay=true
       &Loop=false}
-      ]{\fbox{\includegraphics{darwin-op}}}{VPlayer.swf}
+      ]{\fbox{\includegraphics{gmap_v.png}}}{VPlayer.swf}
 
 %*----------- notes
-    \note[item]{Notes can help you to remember important information. Turn on the notes option.}
+    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
+%-
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[c]{HECTOR SLAM}
+    %\transboxin[duration=1,direction=30]
+    \centering
+
+    \includemedia[
+      width=0.7\linewidth,
+      totalheight=0.39375\linewidth,
+      activate=pageopen,
+      passcontext, 
+      addresource=./Source/movies/HECTOR.mp4,
+      flashvars={
+      source=./Source/movies/HECTOR.mp4
+      &autoPlay=true
+      &Loop=false}
+      ]{\fbox{\includegraphics{hector.png}}}{VPlayer.swf}
+
+%*----------- notes
+    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
+%-
+
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[c]{CARTOGRAPHER}
+    %\transboxin[duration=1,direction=30]
+    \centering
+
+    \includemedia[
+      width=0.7\linewidth,
+      totalheight=0.39375\linewidth,
+      activate=pageopen,
+      passcontext, 
+      addresource=./Source/movies/Cartographer.mp4,
+      flashvars={
+      source=./Source/movies/Cartographer.mp4
+      &autoPlay=true
+      &Loop=false}
+      ]{\fbox{\includegraphics{cartographer.jpeg}}}{VPlayer.swf}
+
+%*----------- notes
+    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
+%-
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[t]{Comparação}
+    \transboxout[duration=0.5]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        \column{.2\textwidth}
+            \includegraphics[width=1.2\textwidth]{gmapp.jpeg}
+        \column{.2\textwidth}
+            \includegraphics[width=1.2\textwidth]{hectorr.jpeg}
+        \column{.2\textwidth}
+            \includegraphics[width=1.2\textwidth]{cartog.jpeg}
+        \column{.2\textwidth}
+            \includegraphics[width=1.2\textwidth]{hxc.jpeg}
+    \end{columns}
+ %*----------- notes
+    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
+%-
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[t]{Lidar}
+    \transboxout[duration=0.5]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        \column{.9\textwidth}
+            \includegraphics[width=1\textwidth]{mapalidar.jpeg}
+    \end{columns}
+ %*----------- notes
+    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
+%-
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[t]{Monocular}
+    \transboxout[duration=0.5]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        %\column{.1\textwidth}
+        \column{.4\textwidth}
+            \includegraphics[width=0.9\textwidth]{cameramono.png}
+        \column{.5\textwidth}
+            \begin{enumerate}
+                \item Parallel Tracking and Mapping (PTAM);
+                \item Semi-direct Visual Odometry (SVO);
+                \item Dense Piecewise Parallel Tracking and Mapping (DPP-
+                        TAM);
+                \item Large Scale Direct monocular SLAM (LSD SLAM);
+                \item ORB SLAM (mono);
+                \item Direct Sparse Odometry (DSO).
+            \end{enumerate}
+    \end{columns}
+ %*----------- notes
+    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
 \end{frame}
 %-
 %*----------- SLIDE -------------------------------------------------------------
