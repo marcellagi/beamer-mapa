@@ -18,9 +18,8 @@
             \begin{center}
             %\centerline{
                 \begin{figure}
-                    \includegraphics[width=0.5\textwidth]{pista}
-                    
-                    %\caption{Pista de corrida \cite{agostini2007}}
+                    \includegraphics[width=0.45\textwidth]{pista}
+                    \caption{ \cite{filipenko2018comparison}}
                 \end{figure}
             %}
             \end{center}
@@ -78,13 +77,15 @@
     \begin{columns}
         %\column{.1\textwidth}
         \column{.4\textwidth}
-            \includegraphics[width=0.9\textwidth]{lidar.png}
+            \begin{figure}
+            \includegraphics[width=0.8\textwidth]{lidar.png}
+            \caption{\cite{Sensores71}}
+            \end{figure}
         \column{.4\textwidth}
             \begin{enumerate}
                 \item GMAPPING;
                 \item Hector SLAM;
-                \item Cartographer;
-                
+                \item Cartographer;     
             \end{enumerate}
     \end{columns}
  %*----------- notes
@@ -96,17 +97,20 @@
     %\transboxin[duration=1,direction=30]
     \centering
 
-    \includemedia[
-      width=0.7\linewidth,
-      totalheight=0.39375\linewidth,
-      activate=pageopen,
-      passcontext, 
-      addresource=./Source/movies/gmap.mp4,
-      flashvars={
-      source=./Source/movies/gmap.mp4
-      &autoPlay=true
-      &Loop=false}
-      ]{\fbox{\includegraphics{gmap_v.png}}}{VPlayer.swf}
+    
+        \includemedia[
+          width=0.6\linewidth,
+          totalheight=0.39375\linewidth,
+          activate=pageopen,
+          passcontext, 
+          addresource=./Source/movies/gmapp.mp4,
+          flashvars={
+          source=./Source/movies/gmapp.mp4
+          &autoPlay=true
+          &Loop=false}
+        ]{\fbox{\includegraphics{gmappp.png}}}{VPlayer.swf}
+        
+    
 
 %*----------- notes
     %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
@@ -122,12 +126,12 @@
       totalheight=0.39375\linewidth,
       activate=pageopen,
       passcontext, 
-      addresource=./Source/movies/HECTOR.mp4,
+      addresource=./Source/movies/hector.mp4,
       flashvars={
-      source=./Source/movies/HECTOR.mp4
+      source=./Source/movies/hector.mp4
       &autoPlay=true
       &Loop=false}
-      ]{\fbox{\includegraphics{hector.png}}}{VPlayer.swf}
+      ]{\fbox{\includegraphics{hectorrr.png}}}{VPlayer.swf}
 
 %*----------- notes
     %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
@@ -144,12 +148,12 @@
       totalheight=0.39375\linewidth,
       activate=pageopen,
       passcontext, 
-      addresource=./Source/movies/Cartographer.mp4,
+      addresource=./Source/movies/cartographerr.mp4,
       flashvars={
-      source=./Source/movies/Cartographer.mp4
+      source=./Source/movies/cartographerr.mp4
       &autoPlay=true
       &Loop=false}
-      ]{\fbox{\includegraphics{cartographer.jpeg}}}{VPlayer.swf}
+      ]{\fbox{\includegraphics{cart.png}}}{VPlayer.swf}
 
 %*----------- notes
     %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
@@ -179,7 +183,7 @@
     %\framesubtitle{Darwin-OP}
     \begin{columns}
         \column{.9\textwidth}
-            \includegraphics[width=1\textwidth]{mapalidar.jpeg}
+            \includegraphics[width=1.1\textwidth]{lidarr.png}
     \end{columns}
  %*----------- notes
     %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
@@ -192,7 +196,10 @@
     \begin{columns}
         %\column{.1\textwidth}
         \column{.4\textwidth}
-            \includegraphics[width=0.9\textwidth]{cameramono.png}
+            \begin{figure}
+                \includegraphics[width=0.8\textwidth]{cameramono.png}
+                \caption{\cite{Baslerca30}}
+            \end{figure}
         \column{.5\textwidth}
             \begin{enumerate}
                 \item Parallel Tracking and Mapping (PTAM);
@@ -299,12 +306,33 @@ TAM)}
       totalheight=0.39375\linewidth,
       activate=pageopen,
       passcontext, 
-      addresource=./Source/movies/DPP-TAM.mp4,
+      addresource=./Source/movies/lsd.mp4,
       flashvars={
-      source=./Source/movies/DPP-TAM.mp4
+      source=./Source/movies/lsd.mp4
       &autoPlay=true
       &Loop=false}
-      ]{\fbox{\includegraphics{DPP.png}}}{VPlayer.swf}
+      ]{\fbox{\includegraphics{lsd.png}}}{VPlayer.swf}
+
+%*----------- notes
+    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
+%-
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[c]{Large Scale Direct monocular SLAM (LSD SLAM)}
+    %\transboxin[duration=1,direction=30]
+    \centering
+
+    \includemedia[
+      width=0.7\linewidth,
+      totalheight=0.39375\linewidth,
+      activate=pageopen,
+      passcontext, 
+      addresource=./Source/movies/lsd.mp4,
+      flashvars={
+      source=./Source/movies/lsd.mp4
+      &autoPlay=true
+      &Loop=false}
+      ]{\fbox{\includegraphics{lsd.png}}}{VPlayer.swf}
 
 %*----------- notes
     %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
