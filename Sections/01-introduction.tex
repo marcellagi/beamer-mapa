@@ -10,7 +10,7 @@
             \column{.05\linewidth}
             \column{.4\linewidth}
                 \begin{enumerate}
-                    \item Lidar 2D;
+                    \item Lidar 2D; 
                     \item Câmera monocular;
                     \item Câmera stéreo.
                 \end{enumerate}
@@ -95,22 +95,22 @@
 %*----------- SLIDE -------------------------------------------------------------
 \begin{frame}[c]{GMAPPING}
     %\transboxin[duration=1,direction=30]
-    \centering
-
-    
-        \includemedia[
-          width=0.6\linewidth,
-          totalheight=0.39375\linewidth,
-          activate=pageopen,
-          passcontext, 
-          addresource=./Source/movies/gmapp.mp4,
-          flashvars={
-          source=./Source/movies/gmapp.mp4
-          &autoPlay=true
-          &Loop=false}
-        ]{\fbox{\includegraphics{gmappp.png}}}{VPlayer.swf}
-        
-    
+    \transboxout[duration=0.5]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        %\column{.1\textwidth}
+        \column{.4\textwidth}
+            \begin{figure}
+            \includegraphics[width=0.8\textwidth]{gmappp.png}
+            \caption{\cite{Sensores71}}
+            \end{figure}
+        \column{.4\textwidth}
+            \begin{enumerate}
+                \item É um dos mais usados para aplicações em robôs;
+                \item Usa filtro de partículas;
+                \item Cria o grid-based map;     
+            \end{enumerate}
+    \end{columns}
 
 %*----------- notes
     %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
@@ -119,19 +119,25 @@
 %*----------- SLIDE -------------------------------------------------------------
 \begin{frame}[c]{HECTOR SLAM}
     %\transboxin[duration=1,direction=30]
-    \centering
+     %\transboxin[duration=1,direction=30]
+    \transboxout[duration=0.5]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        %\column{.1\textwidth}
+        \column{.4\textwidth}
+            \begin{figure}
+            \includegraphics[width=0.8\textwidth]{hectorrr.png}
+            \caption{\cite{Sensores71}}
+            \end{figure}
+        \column{.4\textwidth}
+            \begin{enumerate}
+                \item Produz um mapa bastante preciso;
+                \item Combina o método robusto de digitalização e o uso de sistemas de detecção inercial;
+                \item Não precisa de hodômetro;  
+                \item é possível usa-lo em drones e veículos terrestres operem em locais irregulares  
+            \end{enumerate}
+    \end{columns}
 
-    \includemedia[
-      width=0.7\linewidth,
-      totalheight=0.39375\linewidth,
-      activate=pageopen,
-      passcontext, 
-      addresource=./Source/movies/hector.mp4,
-      flashvars={
-      source=./Source/movies/hector.mp4
-      &autoPlay=true
-      &Loop=false}
-      ]{\fbox{\includegraphics{hectorrr.png}}}{VPlayer.swf}
 
 %*----------- notes
     %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
