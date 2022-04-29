@@ -51,25 +51,6 @@
     \note[item]{Notes can help you to remember important information. Turn on the notes option.}
 \end{frame}
 %-
-{
-%\setbeamertemplate{background}
-%{\includegraphics[trim = 0 0 0 0, clip, width = \the\paperwidth, height = \the\paperheight]{marcel-knupfer-37wuETxVwTQ-unsplash.jpg}}
-%*----------- SLIDE -------------------------------------------------------------
-%\begin{frame}[c]{}
-%    \transboxout[duration=0.5]
-%    
-%    \begin{columns}
-%        \column{.1\textwidth}
-%        \column{.3\textwidth}
-%        \column{.53\textwidth}
-%            \vspace*{-3.5cm}
-%            \Huge{\textbf{\textcolor{mracula5}{Quando chovia...}}}
-%    \end{columns}
-%*----------- notes
-%    \note[item]{Notes can help you to remember important information. Turn on the notes option.}
-%\end{frame}
-%-
-}
 %*----------- SLIDE -------------------------------------------------------------
 \begin{frame}[t]{Lidar 2D}
     \transboxout[duration=0.5]
@@ -78,7 +59,7 @@
         %\column{.1\textwidth}
         \column{.4\textwidth}
             \begin{figure}
-            \includegraphics[width=0.8\textwidth]{lidar.png}
+            \includegraphics[width=0.9\textwidth]{lidar.png}
             \caption{\cite{Sensores71}}
             \end{figure}
         \column{.4\textwidth}
@@ -99,10 +80,10 @@
     %\framesubtitle{Darwin-OP}
     \begin{columns}
         %\column{.1\textwidth}
-        \column{.4\textwidth}
+        \column{.6\textwidth}
             \begin{figure}
-            \includegraphics[width=0.8\textwidth]{gmappp.png}
-            \caption{\cite{Sensores71}}
+            \includegraphics[width=1\textwidth]{gmappp.png}
+            \caption{\cite{Robotics19}}
             \end{figure}
         \column{.4\textwidth}
             \begin{enumerate}
@@ -124,17 +105,17 @@
     %\framesubtitle{Darwin-OP}
     \begin{columns}
         %\column{.1\textwidth}
-        \column{.4\textwidth}
+        \column{.6\textwidth}
             \begin{figure}
-            \includegraphics[width=0.8\textwidth]{hectorrr.png}
-            \caption{\cite{Sensores71}}
+            \includegraphics[width=1\textwidth]{hectorrr.png}
+            \caption{\cite{HectorSL95}}
             \end{figure}
         \column{.4\textwidth}
             \begin{enumerate}
                 \item Produz um mapa bastante preciso;
                 \item Combina o método robusto de digitalização e o uso de sistemas de detecção inercial;
                 \item Não precisa de hodômetro;  
-                \item é possível usa-lo em drones e veículos terrestres operem em locais irregulares  
+                \item é possível usa-lo em drones e veículos terrestres operem em locais irregulares. 
             \end{enumerate}
     \end{columns}
 
@@ -143,23 +124,25 @@
     %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
 \end{frame}
 %-
-
 %*----------- SLIDE -------------------------------------------------------------
 \begin{frame}[c]{CARTOGRAPHER}
     %\transboxin[duration=1,direction=30]
-    \centering
-
-    \includemedia[
-      width=0.7\linewidth,
-      totalheight=0.39375\linewidth,
-      activate=pageopen,
-      passcontext, 
-      addresource=./Source/movies/cartographerr.mp4,
-      flashvars={
-      source=./Source/movies/cartographerr.mp4
-      &autoPlay=true
-      &Loop=false}
-      ]{\fbox{\includegraphics{cart.png}}}{VPlayer.swf}
+    \transboxout[duration=0.5]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        %\column{.1\textwidth}
+        \column{.6\textwidth}
+            \begin{figure}
+            \includegraphics[width=.8\textwidth]{cart.png}
+            \caption{\cite{Cartogra48}}
+            \end{figure}
+        \column{.4\textwidth}
+            \begin{enumerate}
+                \item Possui um mapeamento interno em tempo real;
+                \item Utiliza mapeamento baseado em grade; 
+                \item Pode ser usados em varias plataformas como Turtlebot, PR 2, Toyota HSR por causa da integração com o ROS. 
+            \end{enumerate}
+    \end{columns}
 
 %*----------- notes
     %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
@@ -182,14 +165,32 @@
  %*----------- notes
     %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
 \end{frame}
+%
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[t]{Comparação De Resultados}
+    %\transboxin[duration=1,direction=30]
+    \transboxout[duration=0.5]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        %\column{.1\textwidth}
+        \column{.9\textwidth}
+            \begin{enumerate}
+                \item GMMAPING - Não apresentou um mapa real do ambiente, a trajetória não pode ser computada pois não existe um mapa robusto do ambiente. Por conta disso não apresentou resultados confiáveis.;
+                \item HECTOR SLAM - Produz medições precisas e inclusive pode ser usado para validar a trajetória de outros sistemas SLAM. Utiliza mapeamento baseado em grade; 
+                \item CARTOGRAPHER - Mostra melhor ajuste dos mapas 2D , demonstra um bom resultado. 
+            \end{enumerate}
+    \end{columns}
+ %*----------- notes
+    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
 %-
 %*----------- SLIDE -------------------------------------------------------------
 \begin{frame}[t]{Lidar}
     \transboxout[duration=0.5]
     %\framesubtitle{Darwin-OP}
     \begin{columns}
-        \column{.9\textwidth}
-            \includegraphics[width=1.1\textwidth]{lidarr.png}
+        \column{1\textwidth}
+            \includegraphics[width=1\textwidth]{lidarr.png}
     \end{columns}
  %*----------- notes
     %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
@@ -201,9 +202,9 @@
     %\framesubtitle{Darwin-OP}
     \begin{columns}
         %\column{.1\textwidth}
-        \column{.4\textwidth}
+        \column{.5\textwidth}
             \begin{figure}
-                \includegraphics[width=0.8\textwidth]{cameramono.png}
+                \includegraphics[width=0.7\textwidth]{cameramono.png}
                 \caption{\cite{Baslerca30}}
             \end{figure}
         \column{.5\textwidth}
@@ -224,41 +225,46 @@
 %*----------- SLIDE -------------------------------------------------------------
 \begin{frame}[c]{Parallel Tracking and Mapping (PTAM):}
     %\transboxin[duration=1,direction=30]
-    \centering
-
-    \includemedia[
-      width=0.7\linewidth,
-      totalheight=0.39375\linewidth,
-      activate=pageopen,
-      passcontext, 
-      addresource=./Source/movies/p.mp4,
-      flashvars={
-      source=./Source/movies/p.mp4
-      &autoPlay=true
-      &Loop=false}
-      ]{\fbox{\includegraphics{p.png}}}{VPlayer.swf}
-
+    \transboxout[duration=0.5]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        %\column{.1\textwidth}
+        \column{.6\textwidth}
+            \begin{figure}
+            \includegraphics[width=0.9\textwidth]{p.png}
+            \caption{\cite{webcite}}
+            \end{figure}
+        \column{.4\textwidth}
+            \begin{enumerate}
+                \item Baseado em quadro-chave;
+                \item Permite estimar a pose do robô; 
+                \item Construir o mapa rastreando características; 
+                \item Não produz um para para o ambiente do ROS.
+            \end{enumerate}
+    \end{columns}
 %*----------- notes
     %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
 \end{frame}
 %-
 %*----------- SLIDE -------------------------------------------------------------
 \begin{frame}[c]{Semi-direct Visual Odometry (SVO):}
-    %\transboxin[duration=1,direction=30]
-    \centering
-
-    \includemedia[
-      width=0.7\linewidth,
-      totalheight=0.39375\linewidth,
-      activate=pageopen,
-      passcontext, 
-      addresource=./Source/movies/svo.mp4,
-      flashvars={
-      source=./Source/movies/svo.mp4
-      &autoPlay=true
-      &Loop=false}
-      ]{\fbox{\includegraphics{svo.png}}}{VPlayer.swf}
-
+   %\transboxin[duration=1,direction=30]
+    \transboxout[duration=0.5]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        %\column{.1\textwidth}
+        \column{.6\textwidth}
+            \begin{figure}
+            \includegraphics[width=1\textwidth]{svo.png}
+            \caption{\cite{SVOFastS44}}
+            \end{figure}
+        \column{.4\textwidth}
+            \begin{enumerate}
+                \item Usa um paradigma semi-direto;
+                \item Estimar o movimento a partir da intensidade dos pixels; 
+                \item Não houve um resultado satisfatório. 
+            \end{enumerate}
+    \end{columns}
 %*----------- notes
     %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
 \end{frame}
@@ -267,19 +273,20 @@
 \begin{frame}[c]{Dense Piecewise Parallel Tracking and Mapping(DPP-
 TAM)}
     %\transboxin[duration=1,direction=30]
-    \centering
-
-    \includemedia[
-      width=0.7\linewidth,
-      totalheight=0.39375\linewidth,
-      activate=pageopen,
-      passcontext, 
-      addresource=./Source/movies/DPP-TAM.mp4,
-      flashvars={
-      source=./Source/movies/DPP-TAM.mp4
-      &autoPlay=true
-      &Loop=false}
-      ]{\fbox{\includegraphics{DPP.png}}}{VPlayer.swf}
+    \transboxout[duration=0.5]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        %\column{.1\textwidth}
+        \column{.6\textwidth}
+            \begin{figure}
+            \includegraphics[width=1\textwidth]{DPP.png}
+            \caption{\cite{PDFDPPTA82}}
+            \end{figure}
+        \column{.4\textwidth}
+            \begin{enumerate}
+                \item utiliza uma hipótese de que as regioes com a mesma cor pertencem a proximidade do mesmo planoUsa um paradigma semi-direto;
+            \end{enumerate}
+    \end{columns}
 
 %*----------- notes
     %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
@@ -303,21 +310,43 @@ TAM)}
 \end{frame}
 %-
 %*----------- SLIDE -------------------------------------------------------------
-\begin{frame}[c]{Large Scale Direct monocular SLAM (LSD SLAM)}
+\begin{frame}[t]{Comparação De Resultados}
     %\transboxin[duration=1,direction=30]
-    \centering
-
-    \includemedia[
-      width=0.7\linewidth,
-      totalheight=0.39375\linewidth,
-      activate=pageopen,
-      passcontext, 
-      addresource=./Source/movies/lsd.mp4,
-      flashvars={
-      source=./Source/movies/lsd.mp4
-      &autoPlay=true
-      &Loop=false}
-      ]{\fbox{\includegraphics{lsd.png}}}{VPlayer.swf}
+    \transboxout[duration=0.5]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        %\column{.1\textwidth}
+        \column{.9\textwidth}
+            \begin{enumerate}
+                \item PTAM - Os resultados não foram confiaveis, o sistema perdeu a pista quando o robô teve uma virada, dessa forma nao é muito robusto nas manobras laterais;
+                \item SVO - O sistema não é robusto para esta aplicação ja que o robo perde a pista nas curvas, mas pode ser usado para obter informações dos segmentos de movimentos; 
+                \item DPP-TAM - o sistema não é suficientemente robusto para rastreamento em curvas robotizadas. 
+            \end{enumerate}
+    \end{columns}
+ %*----------- notes
+    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
+%-
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[c]{Large Scale Direct monocular SLAM (LSD SLAM)}
+   %\transboxin[duration=1,direction=30]
+    \transboxout[duration=0.5]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        %\column{.1\textwidth}
+        \column{.6\textwidth}
+            \begin{figure}
+            \includegraphics[width=0.9\textwidth]{lsd.png}
+            \caption{\cite{LargeSca63}}
+            \end{figure}
+        \column{.4\textwidth}
+            \begin{enumerate}
+                \item Utiliza uma imagem local fornecendo uma previsão de pose;
+                \item Constrói mapas densos;
+                \item Tem fechamento de loop;
+                \item Vantagem nos erros de compensação de deriva.
+            \end{enumerate}
+    \end{columns}
 
 %*----------- notes
     %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
@@ -326,19 +355,22 @@ TAM)}
 %*----------- SLIDE -------------------------------------------------------------
 \begin{frame}[c]{Direct Sparse Odometry}
     %\transboxin[duration=1,direction=30]
-    \centering
-
-    \includemedia[
-      width=0.7\linewidth,
-      totalheight=0.39375\linewidth,
-      activate=pageopen,
-      passcontext, 
-      addresource=./Source/movies/dso.mp4,
-      flashvars={
-      source=./Source/movies/dso.mp4
-      &autoPlay=true
-      &Loop=false}
-      ]{\fbox{\includegraphics{dso.png}}}{VPlayer.swf}
+    \transboxout[duration=0.5]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        %\column{.1\textwidth}
+        \column{.6\textwidth}
+            \begin{figure}
+            \includegraphics[width=1\textwidth]{dso.png}
+            \caption{\cite{DSODirec99}}
+            \end{figure}
+        \column{.4\textwidth}
+            \begin{enumerate}
+                \item Precisa de um desenvolvimento adicional para implementação da robótica;
+                \item Mapa denso;
+                \item sem o fechamento de loop a pose foi acumulada na 1 volta e na 2 ele duplicou os objetos podendo levar a erros adicionais.
+            \end{enumerate}
+    \end{columns}
 
 %*----------- notes
     %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
@@ -347,19 +379,23 @@ TAM)}
 %*----------- SLIDE -------------------------------------------------------------
 \begin{frame}[c]{ORB SLAM}
     %\transboxin[duration=1,direction=30]
-    \centering
-
-    \includemedia[
-      width=0.7\linewidth,
-      totalheight=0.39375\linewidth,
-      activate=pageopen,
-      passcontext, 
-      addresource=./Source/movies/orb.mp4,
-      flashvars={
-      source=./Source/movies/orb.mp4
-      &autoPlay=true
-      &Loop=false}
-      ]{\fbox{\includegraphics{orb.png}}}{VPlayer.swf}
+    \transboxout[duration=0.5]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        %\column{.1\textwidth}
+        \column{.6\textwidth}
+            \begin{figure}
+            \includegraphics[width=1\textwidth]{orb.png}
+            \caption{\cite{ORBSLAM323}}
+            \end{figure}
+        \column{.4\textwidth}
+            \begin{enumerate}
+                \item Rastreia as características ORB para estimar a pose do robô;
+                \item Cria uma nuvem de pontos como o mapa;
+                \item Possui o fechamento de loop para detecção;
+                \item Precisa de um desenvolvimento adicional para ser utilizado no ROS.
+            \end{enumerate}
+    \end{columns}
 
 %*----------- notes
     %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
@@ -370,8 +406,8 @@ TAM)}
     \transboxout[duration=0.5]
     %\framesubtitle{Darwin-OP}
     \begin{columns}
-        \column{.9\textwidth}
-            \includegraphics[width=0.8\textwidth]{comp.png}       
+        \column{1\textwidth}
+            \includegraphics[width=.7\textwidth]{comp.png}       
     \end{columns}
  %*----------- notes
     %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
@@ -382,231 +418,287 @@ TAM)}
     \transboxout[duration=0.5]
     %\framesubtitle{Darwin-OP}
     \begin{columns}
-        \column{.9\textwidth}
-            \includegraphics[width=0.8\textwidth]{compp.png}       
+        \column{1\textwidth}
+            \includegraphics[width=1\textwidth]{compp.png}       
     \end{columns}
  %*----------- notes
     %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
 \end{frame}
 %-
 %*----------- SLIDE -------------------------------------------------------------
-\begin{frame}[t]{Camera monocular}
-    \transboxout[duration=0.5]
-    %\framesubtitle{Darwin-OP}
-    \begin{columns}
-        \column{.9\textwidth}
-            \includegraphics[width=1.1\textwidth]{monocan.png}
-    \end{columns}
- %*----------- notes
-    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
-\end{frame}
-%-
-%*----------- SLIDE -------------------------------------------------------------
-\begin{frame}[t]{Camera monocular}
-    \transboxout[duration=0.5]
-    %\framesubtitle{Darwin-OP}
-    \begin{columns}
-        \column{.9\textwidth}
-            \includegraphics[width=1.1\textwidth]{monoo.png}
-    \end{columns}
- %*----------- notes
-    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
-\end{frame}
-%-
-
-%*----------- SLIDE -------------------------------------------------------------
-\begin{frame}[t]{Camera monocular}
-    \transboxout[duration=0.5]
-    %\framesubtitle{Darwin-OP}
-    \begin{columns}
-        \column{.9\textwidth}
-            \includegraphics[width=1.1\textwidth]{comppp.png}
-    \end{columns}
- %*----------- notes
-    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
-\end{frame}
-%-
-%*----------- SLIDE -------------------------------------------------------------
-\begin{frame}[t]{Monocular}
+\begin{frame}[t]{Comparação De Resultados}
+    %\transboxin[duration=1,direction=30]
     \transboxout[duration=0.5]
     %\framesubtitle{Darwin-OP}
     \begin{columns}
         %\column{.1\textwidth}
-        \column{.4\textwidth}
-            \begin{figure}
-                \includegraphics[width=0.9\textwidth]{s.png}
-                \caption{\cite{VisualOd23}}
-            \end{figure}
-        \column{.4\textwidth}
+        \column{.9\textwidth}
             \begin{enumerate}
-                \item ZEDfu;
-                \item Real-Time Appearance-Based Mapping (RTAB map);
-                \item ORB SLAM (stereo);
-                \item Stereo Parallel Tracking and Mapping (S-PTAM);
+                \item LSD - Mapa não é suficientemente denso para localização , isso pode ser filtrado com um modelo de movimento robotizado. após a recuperação em escala absoluta pode ser usado para a pose estimada e construção de mapas.
+                \item DSO - Cria um mapa denso e é robusto para rastreio de pose mas a falta do fechamento de loop torna o mapa ruidoso, quando adicionado torna o mapa mais preciso.
+                \item ORB - Mapa é uma boa aproximação do ambiente, a informação da localização da camera é mais esparsa, é muito robusto  e proporciona uma boa aproximação da trajetória. 
+            \end{enumerate}
+    \end{columns}
+%*----------- notes
+    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
+%-
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[t]{Camera monocular}
+    \transboxout[duration=0.5]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        \column{1\textwidth}
+            \includegraphics[width=1\textwidth]{monocan.png}
     \end{columns}
  %*----------- notes
     %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
 \end{frame}
 %-
 %*----------- SLIDE -------------------------------------------------------------
-\begin{frame}[t]{O sistema robótico}
+\begin{frame}[t]{Camera monocular}
     \transboxout[duration=0.5]
-    \framesubtitle{Darwin-OP}
+    %\framesubtitle{Darwin-OP}
     \begin{columns}
-        \column{.1\textwidth}
+        \column{1\textwidth}
+            \includegraphics[width=1\textwidth]{monoo.png}
+    \end{columns}
+ %*----------- notes
+    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
+%-
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[t]{Camera monocular}
+    \transboxout[duration=0.5]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        \column{1\textwidth}
+            \includegraphics[width=1\textwidth]{comppp.png}
+    \end{columns}
+ %*----------- notes
+    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
+%-
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[t]{Câmera stéreo}
+    \transboxout[duration=0.5]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        %\column{.1\textwidth}
+        \column{.5\textwidth}
+            \begin{figure}
+                \includegraphics[width=1\textwidth]{stereo.png}
+                \caption{\cite{VisualOd23}}
+            \end{figure}
+        \column{.5\textwidth}
+            \begin{enumerate}
+                \item ZEDfu;
+                \item Real-Time Appearance-Based Mapping;
+                \item ORB SLAM;
+                \item Stereo Parallel Tracking and Mapping.
+            \end{enumerate}
+    \end{columns}
+ %*----------- notes
+    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
+%-
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[c]{ZEDfu}
+    %\transboxin[duration=1,direction=30]
+    \transboxout[duration=0.5]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        %\column{.1\textwidth}
+        \column{.6\textwidth}
+            \begin{figure}
+            \includegraphics[width=1\textwidth]{zedfu.png}
+            \caption{\cite{ZEDfuRea64}}
+            \end{figure}
         \column{.4\textwidth}
-        \column{.4\textwidth}
+            \begin{enumerate}
+                \item A trajetória é calculada a bordo usando GPU;
+            \end{enumerate}
     \end{columns}
 
-    \begin{block}{Um bloco de destaque}
-        Um exemplo de block.\\
-        Oferece um certo destaque.
-    \end{block}
+%*----------- notes
+    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
+%-
 
-    \begin{alertblock}{Um bloco de destaque}
-        Um exemplo de alertblock.\\
-        Oferece um certo destaque.
-    \end{alertblock}
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[c]{ORB SLAM}
+    %\transboxin[duration=1,direction=30]
+    \transboxout[duration=0.5]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        %\column{.1\textwidth}
+        \column{.6\textwidth}
+            \begin{figure}
+            \includegraphics[width=0.6\textwidth]{ORB2.png}
+            \caption{\cite{ORBSLAM259}}
+            \end{figure}
+        \column{.4\textwidth}
+            \begin{enumerate}
+                \item Pode ser mono ou stéreo;
+                \item Fornece escalas absolutas.
+            \end{enumerate}
+    \end{columns}
 
-    \begin{exampleblock}{Um bloco de destaque}
-        Um exemplo de exampleblock.
-    \end{exampleblock}
- %*----------- notes
-    \note[item]{Notes can help you to remember important information. Turn on the notes option.}
+%*----------- notes
+    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
 \end{frame}
 %-
 %*----------- SLIDE -------------------------------------------------------------
-\begin{frame}[t]{O sistema robótico}
+\begin{frame}[c]{Stereo Parallel Tracking and Mapping}
+    %\transboxin[duration=1,direction=30]
     \transboxout[duration=0.5]
-    \framesubtitle{PlantUML}
-    
-    \tikzstyle{every node}=[draw=black,thick,anchor=west]
-    \tikzstyle{selected}=[draw=red,fill=red!30]
-    \tikzstyle{optional}=[dashed,fill=gray!50]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        %\column{.1\textwidth}
+        \column{.5\textwidth}
+            \begin{figure}
+            \includegraphics[width=0.6\textwidth]{spt.png}
+            \caption{\cite{SPTAMSte99}}
+            \end{figure}
+        \column{.5\textwidth}
+            \begin{enumerate}
+                \item Baseado em características;
+                \item Tem uma estrutura com detecção de fechamento de loop;
+                \item Pode escolher qualquer detector de pontos-chaves disponível no openCV;
+                \item Foi testado com e sem fechamento de laço.
+            \end{enumerate}
+    \end{columns}
 
-    \begin{tikzpicture}[%
-        grow via three points={one child at (0.5,-0.7) and
-        two children at (0.5,-0.7) and (0.5,-1.4)},
-        edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
-        \node {texmf}
-          child { node {doc}}		
-          child { node {fonts}}
-          child { node {source}}
-          child { node [selected] {tex}
-            child { node {generic}}
-            child { node [optional] {latex}}
-            child { node {plain}}
-          }
-          child [missing] {}				
-          child [missing] {}				
-          child [missing] {}				
-          child { node {texdoc}};
-      \end{tikzpicture}
-
- %*----------- notes
-    \note[item]{Notes can help you to remember important information. Turn on the notes option.}
+%*----------- notes
+    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
 \end{frame}
 %-
 %*----------- SLIDE -------------------------------------------------------------
-\begin{frame}[t]{O sistema robótico}
+\begin{frame}[t]{Comparação}
     \transboxout[duration=0.5]
-    \framesubtitle{PlantUML}
-    
-    % Define block styles
-    \tikzstyle{decision} = [diamond, draw, fill=blue!20, 
-    text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
-    \tikzstyle{block} = [rectangle, draw, fill=blue!20, 
-    text width=5em, text centered, rounded corners, minimum height=4em]
-    \tikzstyle{line} = [draw, -latex']
-    \tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
-    minimum height=2em]
-
-    \begin{tikzpicture}[node distance = 2cm, auto]
-        % Place nodes
-        \node [block] (init) {initialize model};
-        \node [cloud, left of=init] (expert) {expert};
-        \node [cloud, right of=init] (system) {system};
-        \node [block, below of=init] (identify) {identify candidate models};
-        \node [block, below of=identify] (evaluate) {evaluate candidate models};
-        \node [block, left of=evaluate, node distance=3cm] (update) {update model};
-        \node [decision, below of=evaluate] (decide) {is best candidate better?};
-        \node [block, below of=decide, node distance=3cm] (stop) {stop};
-        % Draw edges
-        \path [line] (init) -- (identify);
-        \path [line] (identify) -- (evaluate);
-        \path [line] (evaluate) -- (decide);
-        \path [line] (decide) -| node [near start] {yes} (update);
-        \path [line] (update) |- (identify);
-        \path [line] (decide) -- node {no}(stop);
-        \path [line,dashed] (expert) -- (init);
-        \path [line,dashed] (system) -- (init);
-        \path [line,dashed] (system) |- (evaluate);
-    \end{tikzpicture}
-
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        \column{1\textwidth}
+            \includegraphics[width=0.5\textwidth]{comparaçãos.png}       
+    \end{columns}
  %*----------- notes
-    \note[item]{Notes can help you to remember important information. Turn on the notes option.}
+    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
 \end{frame}
 %-
 %*----------- SLIDE -------------------------------------------------------------
-\begin{frame}[t]{O sistema robótico}
+\begin{frame}[t]{Comparação}
     \transboxout[duration=0.5]
-    \framesubtitle{PlantUML}
-    
-    \begin{tikzpicture}[line width=0.1pt]
-        \draw(0,0) circle(5cm);
-        \draw(0,0) circle(1cm);
-        \draw(0,0) node {\Huge$\mathbf{A}$};
-        \draw(0,0) circle(4.5cm);
-        \draw(-48:2.5) arc(-48:240:2.5cm);
-        %% The outer nodes
-        \foreach \x in {36,72,...,360}
-            \shade[ball color=black](\x:5) circle(4pt);
-        \foreach \nodes in {12,24,...,360}
-            \shade[ball color=black](\nodes:3.5) circle(4pt);
-        %%% The connecting nodes
-        \foreach \angle in {-48,-12,...,240}
-            \draw(\angle:2.5) --++(\angle:0.9cm);
-        %%% outer interconnects
-        \foreach \angle in {-24,12,...,306}
-            \draw(\angle:3.6) --++(\angle:0.9cm);
-        \foreach \y in {-24,12,...,240}
-            \shade[ball color=black](\y:4.5cm) circle(4pt);
-    
-        %% outer most connections
-        \foreach \angle in{-36,0,...,306}
-            \draw(\angle:4.9cm) --(\angle:4.7cm) [rotate=\angle]arc(0:180:0.20cm);
-        \foreach \angle in{-36,0,...,306}
-            \draw(\angle:4.3cm) --(\angle:3.6cm);
-        %% Outer connects and leads
-        \shade[ball color=black](276:6) circle(4pt);
-        \draw(276:6)circle(4pt)--(276:5.2)[rotate=276]arc(0:180:0.25cm);
-        \draw(276:7)node {$\mathbf{K_0}$};
-        \draw(276:4.2)[rotate=276]arc(180:360:0.25cm);
-        \draw(276:4.2)--(276:3.5);
-    
-        %% Exploitation of circular symmetry of the required figure
-    
-        {[rotate=72]
-            \shade[ball color=black](276:6) circle(4pt);
-            \draw(276:6)circle(4pt)--(276:5.2)[rotate=276]arc(0:180:0.25cm);
-            \draw(270:6)node {$\mathbf{K_1-K_9}$};
-            \draw(276:4.2)[rotate=276]arc(180:360:0.25cm);%%%
-            \draw(276:4.2)--(276:3.5);
-        }
-    
-        {[rotate=-48]
-            \shade[ball color=black](276:6) circle(4pt);
-            \draw(276:6)circle(4pt)--(276:5.2)[rotate=276]arc(0:180:0.20cm);
-            \draw(276:7)node {$\mathbf{g_2}$};
-            \draw(276:4.8)--(276:4.5);
-        }
-    
-        \draw(180:5)--(180:6);
-        \shade[ball color=black](180:6) circle(4pt);
-        \draw(180:6.5)node{$\mathbf{g_1}$};
-    \end{tikzpicture}
-
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        \column{1\textwidth}
+            \includegraphics[width=1\textwidth]{comps.png}       
+    \end{columns}
  %*----------- notes
-    \note[item]{Notes can help you to remember important information. Turn on the notes option.}
+    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
+%-
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[t]{Comparação}
+    \transboxout[duration=0.5]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        \column{1\textwidth}
+            \includegraphics[width=0.5\textwidth]{comppss.png}       
+    \end{columns}
+ %*----------- notes
+    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
+%-
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[t]{Comparação De Resultados}
+    %\transboxin[duration=1,direction=30]
+    \transboxout[duration=0.5]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        %\column{.1\textwidth}
+        \column{.9\textwidth}
+            \begin{enumerate}
+                \item ZEDfu - Para a experiência forneceu RMSE grande, o sistema é robusto em termo de rastreamento de pose mas a trajetória não é exata para tal tipo de navegação.
+                \item RTAB - Tem problema com a pose quando o robô se aproxima das paredes, mas o sistema de detecção de falha é capaz de detectar a falha e determinar a pose correta do robô. É robusto e preciso, tem precisão comparável com os métodos do lidar.
+                \item ORB - Estimativa boa e cria mapas 3D esparso, localização robusta.
+                \item PTAM - É robusto em termos de rastreio de pose e tem o mapa esparso, mas a precisão não é suficiente. 
+            \end{enumerate}
+    \end{columns}
+%*----------- notes
+    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
+%-
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[t]{Camera stéreo}
+    \transboxout[duration=0.5]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        \column{1\textwidth}
+            \includegraphics[width=1\textwidth]{mapa1.png}
+    \end{columns}
+ %*----------- notes
+    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
+%-
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[t]{Camera stéreo}
+    \transboxout[duration=0.5]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        \column{1\textwidth}
+            \includegraphics[width=.85\textwidth]{mapa4.png}
+    \end{columns}
+ %*----------- notes
+    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
+%-
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[t]{Camera stéreo}
+    \transboxout[duration=0.5]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        \column{1\textwidth}
+            \includegraphics[width=1\textwidth]{mapa3.png}
+    \end{columns}
+ %*----------- notes
+    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
+%-
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[t]{Comparação}
+    \transboxout[duration=0.5]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        \column{1\textwidth}
+            \includegraphics[width=.45\textwidth]{1.png}
+            \includegraphics[width=.45\textwidth]{2.png}
+            \includegraphics[width=.45\textwidth]{3.png}
+    \end{columns}
+ %*----------- notes
+    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
+%-
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[t]{RESULTADO FILNAL}
+    \transboxout[duration=0.5]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        \column{1\textwidth}
+            \includegraphics[width=0.7\textwidth]{result.png}
+    \end{columns}
+ %*----------- notes
+    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
+\end{frame}
+%-
+%*----------- SLIDE -------------------------------------------------------------
+\begin{frame}[t]{RESULTADO FILNAL}
+    \transboxout[duration=0.5]
+    %\framesubtitle{Darwin-OP}
+    \begin{columns}
+        \column{1\textwidth}
+            \includegraphics[width=1\textwidth]{ultimo.png}
+    \end{columns}
+ %*----------- notes
+    %\note[item]{Notes can help you to remember important information. Turn on the notes option.}
 \end{frame}
 %-
